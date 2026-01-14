@@ -1,0 +1,23 @@
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-wrapper .custom-carousel-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: white; 
+  border: none;
+  border-radius: 40px !important;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+ 
+  
+}
+.carousel-wrapper .custom-carousel-btn:hover{
+    background-color: white;
+    color: black;
+}

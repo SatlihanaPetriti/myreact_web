@@ -1,0 +1,21 @@
+.announcement-navbar {
+    background-color: #214332; 
+    padding: 10px 0;
+}
+
+.announcement-wrapper {
+    display: flex;  
+    gap: 20px;              
+    align-items: center;  
+}
+
+.announcement-text {
+    margin: 0;      
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+.close-btn {
+    margin-left: auto;     
+    cursor: pointer;
+}

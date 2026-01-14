@@ -1,0 +1,25 @@
+.footer-container {
+  background-color:#F5F5EC; 
+  padding: 30px 0;
+}
+.footer-container a {
+  color:#214332; 
+  text-decoration: none; 
+  transition: color 0.2s;
+}
+.footer-container h5 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-container ul li {
+  margin-bottom: 8px;
+}
+.footer-payment-icons img {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.footer-payment-icons img:last-child {
+  margin-right: 0;
+}

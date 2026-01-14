@@ -1,0 +1,27 @@
+.navbar.dropdown-container {
+  background-color: #F5F5EC;
+}
+
+.home-con{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+}
+
+.left-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-icons .icon {
+  color: #214332;
+  cursor: pointer;
+}
