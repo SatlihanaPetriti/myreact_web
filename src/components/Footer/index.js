@@ -5,6 +5,7 @@ import mastercard from '../../images/img-2.png';
 import usaexpress from '../../images/img-1.png';
 import applepay from '../../images/img-3.png';
 import paypal from '../../images/img-4.png';
+import '../../Pages/Home/index.css';
 
 const FooterHome = () => {
     return (

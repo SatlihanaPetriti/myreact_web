@@ -1,5 +1,6 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './index.css';
+import '../../Pages/Home/index.css';
 import c1 from '../../images/collection-plant-4.jpg';
 import c2 from '../../images/collection-plant-2.jpg';
 import c3 from '../../images/collection-plant-5.jpg';

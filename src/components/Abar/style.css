@@ -1,21 +1,64 @@
+/* Navbar */
 .announcement-navbar {
-    background-color: #214332; 
-    padding: 10px 0;
+    background-color: #214332;
+    overflow: hidden;
 }
 
-.announcement-wrapper {
-    display: flex;  
-    gap: 20px;              
-    align-items: center;  
+/* Container */
+.announcement-container {
+    height: 25px;
+    position: relative;
+
 }
 
+/* Scroll wrapper */
+.scroll-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Pause on hover */
+.scroll-wrapper:hover .scroll-content {
+    animation-play-state: paused;
+}
+
+/* Scrolling content */
+.scroll-content {
+    display: flex;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+}
+
+/* Text */
 .announcement-text {
-    margin: 0;      
-    color: white;
-    font-weight: bold;
+    white-space: nowrap;
+
     font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    padding-right: 1.5rem;
+    color: white;
+    position: relative;
 }
-.close-btn {
-    margin-left: auto;     
-    cursor: pointer;
+
+/* Dash / line separator */
+.announcement-text::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 0.5px;
+    background-color: white;
+    margin: 0 2rem;
+    vertical-align: middle;
+    opacity: 0.9;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
