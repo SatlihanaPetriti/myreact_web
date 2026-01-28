@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import './index.css';
 import visa from '../../images/visa.png';
@@ -8,9 +9,28 @@ import paypal from '../../images/img-4.png';
 import '../../Pages/Home/index.css';
 
 const FooterHome = () => {
+    //  track email input and messages
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    // subscription form submission
+    const handleSubscribe = (e) => {
+        e.preventDefault(); // Prevent page refresh
+
+        if (!email) {
+            setMessage('Please enter a valid email.');
+            return;
+        }
+        //  sends the email to backend or API
+        console.log('Subscribing email:', email);
+
+        setMessage(`Thank you for subscribing, ${email}!`);
+        setEmail('');
+    };
+
     return (
         <footer className='footer-container pt-5'>
-            <Container>
+            <Container fluid>
                 <Row>
                     {/* Help Column */}
                     <Col xs={12} md={3} className='mb-4'>
@@ -38,7 +58,7 @@ const FooterHome = () => {
                     </Col>
 
                     {/* Find Us Column */}
-                    <Col  md={3} className='mb-4'>
+                    <Col md={3} className='mb-4'>
                         <h5>Find Us</h5>
                         <ul className='list-unstyled'>
                             <li><a href='/'>Find a location nearest you.</a></li>
@@ -59,10 +79,22 @@ const FooterHome = () => {
                     <Col md={3} className='mb-4'>
                         <h5>Sign Up for Email</h5>
                         <p>Sign up to get first dibs on new arrivals, sales, exclusive content, events and more!</p>
-                        <Form className='d-flex mb-3'>
-                            <Form.Control type='email' placeholder='Enter your email...' className='me-2' />
+
+                        {/*  Subscription Form */}
+                        <Form className='d-flex mb-3' onSubmit={handleSubscribe}>
+                            <Form.Control
+                                type='email'
+                                placeholder='Enter your email...'
+                                className='me-2'
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
                             <Button variant='success' type='submit'>Subscribe</Button>
                         </Form>
+
+                        {/* feedback message */}
+                        {message && <p style={{ color: 'green' }}>{message}</p>}
+
                         <Form.Select className='mb-2'>
                             <option>USD $ | United States</option>
                             <option>EUR € | France</option>
@@ -90,7 +122,6 @@ const FooterHome = () => {
                         <img src={paypal} alt='PayPal' />
                         <img src={applepay} alt='Apple Pay' />
                     </Col>
-
                 </Row>
             </Container>
         </footer>

@@ -5,6 +5,7 @@ import img2 from '../../images/plant_slide_2.jpg';
 import img3 from '../../images/plant_slide_3.jpg';
 import './carousel.css';
 import '../../Pages/Home/index.css';
+import { Link } from 'react-router-dom';
 
 const CarouselBootstrap = () => {
   return (
@@ -14,9 +15,11 @@ const CarouselBootstrap = () => {
         <Carousel.Item interval={1500}>
           <img src={img1} alt='First slide' className='d-block w-100' />
           <div className='carousel-button-wrapper'>
-            <Button className='custom-carousel-btn' size='lg'>
-              Shop Collection <span className='btn-arrow'>&gt;</span>
-            </Button>
+            <Link to='/indoor-plants'>
+              <Button className='custom-carousel-btn' size='lg'>
+                Shop Collection <span className='btn-arrow'>&gt;</span>
+              </Button>
+            </Link>
           </div>
         </Carousel.Item>
 
@@ -24,9 +27,11 @@ const CarouselBootstrap = () => {
         <Carousel.Item interval={1500}>
           <img src={img2} alt='Second slide' className='d-block w-100' />
           <div className='carousel-button-wrapper'>
-            <Button className='custom-carousel-btn' size='lg'>
-              Shop Collection <span className='btn-arrow'>&gt;</span>
-            </Button>
+            <Link to='/indoor-plants'>
+              <Button className='custom-carousel-btn' size='lg'>
+                Shop Collection <span className='btn-arrow'>&gt;</span>
+              </Button>
+            </Link>
           </div>
         </Carousel.Item>
 
@@ -34,9 +39,11 @@ const CarouselBootstrap = () => {
         <Carousel.Item interval={1500}>
           <img src={img3} alt='Third slide' className='d-block w-100' />
           <div className='carousel-button-wrapper'>
-            <Button className='custom-carousel-btn' size='lg'>
-              Shop Collection <span className='btn-arrow'>&gt;</span>
-            </Button>
+            <Link to='/indoor-plants'>
+              <Button className='custom-carousel-btn' size='lg'>
+                Shop Collection <span className='btn-arrow'>&gt;</span>
+              </Button>
+            </Link>
           </div>
         </Carousel.Item>
       </Carousel>

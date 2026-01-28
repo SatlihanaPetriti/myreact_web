@@ -1,22 +1,19 @@
 import ReactDOM from 'react-dom/client';
-import HomePage from "./Pages/Home";
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter , Routes, Route } from "react-router";
-import About from './About';
+import HomePage from './Pages/Home';
+import IndoorPlants from './components/Indoor Plants/indoor_plants.js';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  // <React.StrictMode>
-  <>
-   <BrowserRouter>
+  <BrowserRouter>
     <Routes>
-      <Route path="/about" element={<About />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/indoor-plants" element={<IndoorPlants />} />
     </Routes>
   </BrowserRouter>
-    <HomePage />
-  </>
-  //</React.StrictMode>
 );
 
 reportWebVitals();
